@@ -1,7 +1,8 @@
-package com.lafaspot.hdhomerun.xmbc;
+package com.lafaspot.hdhomerun;
 
 import java.util.logging.Logger;
 
+import com.lafaspot.hdhomerun.xmbc.HDHomeRunTunner;
 import com.lafaspot.hdhomerun.xmbc.SCANNING.Filter;
 
 public class CreateSTRM {
