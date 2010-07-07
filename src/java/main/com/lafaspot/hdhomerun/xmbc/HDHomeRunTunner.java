@@ -85,7 +85,8 @@ public class HDHomeRunTunner {
 					int index = 0;
 					while (file.exists()) {
 						index++;
-						file = new File(dir, program.description().trim() + " tuner" + mTuner + "_" + index + ".strm");
+						fileName = program.description().trim() + " tuner" + mTuner + "_" + index + ".strm";
+						file = new File(dir, filterFileName(fileName));
 					}
 					writeFile(file, scanning.toSTRM(mId, mTuner, program));
 				}
