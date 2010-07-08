@@ -1,12 +1,12 @@
-<project name="HelloWorld" basedir="." default="main">
+<project name="hdhomeruntoolbox" basedir="." default="main">
 
-    <property name="src.dir"     value="src"/>
+    <property name="src.dir"     value="src/java/main"/>
 
     <property name="build.dir"   value="build"/>
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="jar.dir"     value="${build.dir}/jar"/>
 
-    <property name="main-class"  value="oata.HelloWorld"/>
+    <property name="main-class"  value="com.lafaspot.hdhomerun.CreateSTRM"/>
 
 
 
