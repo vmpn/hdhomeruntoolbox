@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 import com.lafaspot.hdhomerun.xmbc.SCANNING.Filter;
 
 public class HDHomeRunTunner {
-	private Logger log = Logger.getLogger("HDHomeRunConfig");
+	public transient static Logger log = Logger.getLogger("HDHomeRunTunner");
 	private final String mId;
 	private final int mTuner;
 	private List<SCANNING> scanList = new ArrayList<SCANNING>();

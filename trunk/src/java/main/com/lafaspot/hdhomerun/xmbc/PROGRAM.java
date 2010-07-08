@@ -1,5 +1,7 @@
 package com.lafaspot.hdhomerun.xmbc;
 
+import java.util.logging.Level;
+
 import com.lafaspot.hdhomerun.xmbc.SCANNING.Filter;
 
 class PROGRAM extends SCANOBJ {
@@ -16,7 +18,7 @@ class PROGRAM extends SCANOBJ {
 	public String description() {		
 		int pos = data.indexOf(":");
 		if (pos == -1) {
-			System.err.println("PROGRAM.description missing from line: " + data);
+			HDHomeRunTunner.log.log(Level.SEVERE, "PROGRAM.description missing from line: " + data);
 			return "NOT FOUND";
 		}
 		String description = data.substring(pos+2);
@@ -29,7 +31,7 @@ class PROGRAM extends SCANOBJ {
 	public String number() {
 		int pos = data.indexOf(":");
 		if (pos == -1) {
-			System.err.println("PROGRAM.number missing from line: " + data);
+			HDHomeRunTunner.log.log(Level.SEVERE, "PROGRAM.number missing from line: " + data);
 			return "NOT FOUND";
 		}
 		return data.substring(8, pos);
