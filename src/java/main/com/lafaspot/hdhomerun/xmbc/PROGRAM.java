@@ -12,13 +12,13 @@ class PROGRAM extends SCANOBJ {
 	}
 	
 	public boolean encrypted() {
-		return data.contains("(encrypted)");
+		return data.contains("(encrypted)") || data.contains("internet");
 	}
 
 	public String description() {		
 		int pos = data.indexOf(":");
 		if (pos == -1) {
-			HDHomeRunTunner.log.log(Level.SEVERE, "PROGRAM.description missing from line: " + data);
+			HDHomeRunTunner.log.log(Level.WARNING, "PROGRAM.description missing from line: " + data);
 			return "NOT FOUND";
 		}
 		String description = data.substring(pos+2);
@@ -31,7 +31,7 @@ class PROGRAM extends SCANOBJ {
 	public String number() {
 		int pos = data.indexOf(":");
 		if (pos == -1) {
-			HDHomeRunTunner.log.log(Level.SEVERE, "PROGRAM.number missing from line: " + data);
+			HDHomeRunTunner.log.log(Level.WARNING, "PROGRAM.number missing from line: " + data);
 			return "NOT FOUND";
 		}
 		return data.substring(8, pos);
@@ -42,7 +42,11 @@ class PROGRAM extends SCANOBJ {
 		if (pos == -1) return false;
 		String description = data.substring(pos+2);
 		if (description.trim().equals("0") || description.trim().equals("")
-		    || description.trim().equals("0 (control)")|| description.trim().equals("0 (no data)")) {
+		    || description.trim().equals("0 (control)")
+		    || description.trim().equals("0 (no data)")
+		    || description.trim().equals("internet")
+		    || description.trim().equals("0 (encrypted)")
+		    ) {
 			return false;
 		}
 		return true;

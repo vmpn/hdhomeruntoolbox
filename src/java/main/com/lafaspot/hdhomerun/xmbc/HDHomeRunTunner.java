@@ -132,11 +132,18 @@ public class HDHomeRunTunner {
 					scanList.add(scanning);
 				} else if (line.startsWith("TSID")) {
 					scanning.tsid = new TSID(scanning, line);
+				} else if (line.startsWith("PROGRAM: tsid=")) {
+					// support for version 20080430
+					scanning.tsid = new TSID(scanning, line);
 				} else if (line.startsWith("LOCK")) {
 					scanning.lock = new LOCK(scanning, line);
+				} else if (line.startsWith("PROGRAM: ")) {
+					// support for version 20080430
+					String newline = line.replace("PROGRAM: ", "PROGRAM ");
+					scanning.programList.add(new PROGRAM(scanning, newline));
 				} else if (line.startsWith("PROGRAM")) {
 					scanning.programList.add(new PROGRAM(scanning, line));
-				} else {
+				}else {
 					log.info("Scanning line ignored: " + line);
 				}
 

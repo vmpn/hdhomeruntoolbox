@@ -13,6 +13,7 @@ public class CreateSTRM {
 	static public void main(String[] args) {
 		HDHomeRunTunner config = new HDHomeRunTunner(1);		
 		config.createSTRMFile(dir, Filter.ENCRYPTED);
+		log.info("strm files available at '" + dir + "'");
 		//config.playStream("80","1");
 	}
 }
