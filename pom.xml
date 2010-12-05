@@ -3,7 +3,7 @@
 
 	<groupId>com.lafaspot.hdhomeurntoolbox</groupId>
 	<artifactId>hdhomeurntoolbox-core</artifactId>
-	<version>0.1.9</version>
+	<version>0.1.10-SNAPSHOT</version>
 
 	<name>HDHomeRun Toolbox</name>
 	<description>Small utility to create my channel data to use with xbmc.
@@ -16,9 +16,9 @@
 
 	<!-- SUBVERSION (SOURCE) REPOSITORY -->
 	<scm>
-		<connection>scm:svn:https://hdhomeruntoolbox.googlecode.com/svn/tags/hdhomeurntoolbox-core-0.1.9</connection>
-		<developerConnection>scm:svn:https://hdhomeruntoolbox.googlecode.com/svn/tags/hdhomeurntoolbox-core-0.1.9</developerConnection>
-		<url>https://hdhomeruntoolbox.googlecode.com/svn/tags/hdhomeurntoolbox-core-0.1.9</url>
+		<connection>scm:svn:https://hdhomeruntoolbox.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:svn:https://hdhomeruntoolbox.googlecode.com/svn/trunk</developerConnection>
+		<url>https://hdhomeruntoolbox.googlecode.com/svn/trunk</url>
 	</scm>
 
 
