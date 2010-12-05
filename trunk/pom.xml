@@ -1,20 +1,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<groupId>com.lafaspot.hdhomeurntoolbox</groupId>
-	<artifactId>hdhomeurntoolbox-core</artifactId>
+	<artifactId>hdhomeurntoolbox-core</artifactId>	
 	<version>0.1.6-SNAPSHOT</version>
+	
 	<name>HDHomeRun Toolbox</name>
 	<description>Small utility to create my channel data to use with xbmc.
 	</description>
 	<url>http://code.google.com/p/hdhomeruntoolbox/</url>
+	
 	<issueManagement>
-		<system>Google code issues</system>
-		<url>http://code.google.com/p/hdhomeruntoolbox/issues/list</url>
+		<url>http://code.google.com/p/hdhomeruntoolbox/issues/list</url>	
 	</issueManagement>
+	
 	<scm>
 		<url>http://hdhomeruntoolbox.googlecode.com/svn/trunk</url>
 	</scm>
+	
+	<organization>
+		<name>lafaspot</name>
+		<url>www.lafaspot.com</url>
+	</organization>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -24,6 +33,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
 	<build>
 		<resources>
 			<resource>
@@ -37,6 +47,9 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.6</version>
+					<configuration>
+                    	<disableXmlReport>true</disableXmlReport>
+                   	</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
